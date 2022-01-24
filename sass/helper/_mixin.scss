@@ -1,0 +1,12 @@
+@mixin CENTER_ROW ($Justify){
+    display: flex;
+    justify-content: $Justify;
+    align-items: center;
+  }
+@mixin CENTER-col($Justify) {
+display: flex;
+flex-direction: column;
+justify-content: $Justify;
+align-items: center;
+}
+

@@ -1,0 +1,151 @@
+@import 'sass/helper/mixin';
+@import 'sass/helper/variable' ;
+@import 'sass/layout/fonts_family';
+
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+.container{
+  @include CENTER_ROW(center);
+  min-height: 100vh;
+  background: content-box radial-gradient(#202020 , #252525);
+
+  .writerAPP{
+    @include CENTER_col(center);
+    width: 70%;
+    align-items: flex-start;
+    border-radius: 8px;
+    padding: 25px 15px 10px 15px;
+    background-color: $main-clr;
+    
+    .controlPanel{
+      @include CENTER_ROW(flex-start);
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 10px 2px;
+      width: 100%;
+
+      .fontFamily{
+
+        label{
+          color: $main-tx-clr;
+          font-weight: bold;
+        }
+
+        select{
+          padding: 5px 0;
+        }
+      }
+
+      .fontSize{
+        @include CENTER_ROW(center);
+        gap: 5px;
+
+        label{
+          color: $main-tx-clr;
+          font-weight: bold;
+        }
+
+        .arrow{
+          @include CENTER_ROW(center);
+          background-color: $alt-clr;
+          padding: 5px 12px;
+          cursor: pointer;
+          user-select: none;
+          transition: background-color 0.2s ease-in-out ;
+          border-radius: 3px;
+
+          &:hover{
+            background-color: darken($alt-clr, 10%);
+          }
+          &.Disabled{
+            background-color: $alt-clr-3;
+            color: #DA1212;
+            pointer-events: none;
+            cursor: no-drop !important;
+          }
+
+        }
+
+        .fontStyle{
+          @include CENTER_ROW(center);
+          background-color: $alt-clr;
+          padding: 2px 12px;
+          font-size: 1.1rem;
+          font-weight: bold;
+          cursor: pointer;
+          user-select: none;
+          transition: background-color 0.2s ease-in-out ;
+          border-radius: 3px;
+
+          &:hover{
+            background-color: darken($alt-clr, 10%);
+
+          }
+        }
+        .fontWeight{
+          @include CENTER_ROW(center);
+          background-color: $alt-clr;
+          padding: 2px 12px;
+          font-size: 1.1rem;
+          font-weight: bold;
+          cursor: pointer;
+          user-select: none;
+          transition: background-color 0.2s ease-in-out ;
+          border-radius: 3px;
+          &:hover{
+            background-color: darken($alt-clr, 10%);
+
+          }
+        }
+
+        >:first-child{
+          font-size: 18px;
+        }
+
+        .display{
+          background-color: $alt-clr-3;
+          padding: 5px 30px;
+          color: $alt-tx-clr;
+          user-select: none;
+          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+      }
+
+      .fontColor{
+
+        label{
+          color: $main-tx-clr;
+          font-weight: bold;
+        }
+
+        select{
+          padding: 5px 0;
+        }
+
+      }
+    }
+    .writeArea{
+      @include CENTER_col(center);
+      width: 100%;
+
+
+      textarea{
+        max-width: 100%;
+        width: 100%;
+        max-height: 100vh;
+        height: 40vh;
+        padding: 5px;
+        background-color: $alt-clr;
+        border: 2px solid $alt-clr-3;
+        text-align: justify;
+        font-size: 16px;
+        font-family: 'Cairo', sans-serif;
+      }
+    }
+  }
+
+}

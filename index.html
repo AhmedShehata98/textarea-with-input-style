@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Filter Tabs</title>
+</head>
+<body>
+    <main class="home">
+        <div class="container">
+            <div class="writerAPP">
+                <div class="controlPanel">
+                    <div class="fontFamily">
+                        <label for="SelectFontFamily">Font family :</label>
+                        <select id="SelectFontFamily">
+                            <option value="'Open Sans', sans-serif">Open Sans</option>
+                            <option selected value="'Cairo', sans-serif">cairo</option>
+                            <option value="'Poppins', sans-serif">Poppins </option>
+                            <option value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Segoe UI</option>
+                            <option value="'Times New Roman', Times, serif">Times New Roman</option>
+                            <option value="'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif">Trebuchet MS</option>
+                        </select>
+                    </div>
+                    <div class="fontSize">
+                        <label>Fontsize :</label>
+                        <span class="arrow left">
+                            <ion-icon name="remove-circle-outline"></ion-icon>
+                        </span>
+                        <span class="display">Default</span>
+                        <span class="arrow right">
+                            <ion-icon name="add-circle-outline"></ion-icon>
+                        </span>
+                        <span class="fontWeight">B</span>
+                        <span class="fontStyle" style="font-style: italic;">I</span>
+                    </div>
+                    <div class="fontColor">
+                        <label>Font Color :</label>
+                        <select id="selectColor">
+                            <option value="#DA1212"> Red </option>
+                            <option value="#17D7A0"> Green </option>
+                            <option value="#11468F"> Blue </option>
+                            <option value="#FFE162"> Yellow </option>
+                            <option value="#252525"> Default </option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="writeArea">
+                    <textarea id="textInputArea" >إذا ركلك أحد من خلفك، فاعلم أنك في المقدمة
+                        
+Life doesn’t give you what you want , It gives you what you work for
+
+                    </textarea>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
